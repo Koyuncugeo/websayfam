@@ -1,76 +1,9 @@
-body {
+ body {
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
   text-align: center;
   margin-top: 50px;
-}
-
-h1 {
-  color: #007acc;
-}
-
-p {
-  font-size: 20px;
-}
-.skill-item {
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  color: white;
-  padding: 1rem;
-  border-radius: 10px;
-  font-weight: 600;
-
-  height: 80px; /* Kutucukların yüksekliği eşitlendi */
-  display: flex; /* Flex ile içerik hizalama */
-  align-items: center; /* Dikey ortalama */
-  justify-content: center; /* Yatay ortalama */
-  margin: 0.5rem; /* İstersen kutucuklar arası boşluk */
-}
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-  }
-
-  .skill-item {
-    height: 70px;
-    font-size: 1rem;
-  }
-}
-/* Diğer CSS kodların */
-
-.skill-item {
-  height: 80px;
-  /* diğer stiller */
-}
-
-/* Medya sorgusu en altta */
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-  }
-
-  .skill-item {
-    height: 70px;
-    font-size: 1rem;
-  }
-}
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .skill-item {
-    height: 70px;
-    font-size: 1rem;
-  }
-}
-body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 50px;
+  overflow-x: hidden; /* Taşmayı önler */
 }
 
 h1 {
@@ -81,6 +14,7 @@ p {
   font-size: 20px;
 }
 
+/* Skills Grid - Genel */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -90,6 +24,7 @@ p {
   padding: 1rem;
 }
 
+/* Skill item kutuları */
 .skill-item {
   background: linear-gradient(45deg, #667eea, #764ba2);
   color: white;
@@ -103,40 +38,67 @@ p {
   font-size: 1.1rem;
   word-break: break-word;
 }
+
+/* Navigation menu - Masaüstü */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav li {
+  /* default için ekleme gerek yok */
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+/* Medya sorgusu: Mobil & Tablet */
+@media (max-width: 768px) {
+  /* Navigation menü mobil düzeni */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  /* Skills grid mobilde 2 kolon yap */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Skill item yükseklik ve font küçült */
+  .skill-item {
+    height: 70px;
+    font-size: 1rem;
+  }
+}
+
+/* Çok küçük ekranlar için (400px altı) */
 @media (max-width: 400px) {
   .skill-item {
     height: 60px;
     font-size: 0.9rem;
   }
-}
-/* Masaüstü için yatay menü zaten var: */
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-/* Mobil için ekle: */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;  /* Menü dikey olacak */
-    align-items: center;     /* Ortalanacak */
-    gap: 1rem;               /* Aralarındaki boşluk az olacak */
-    padding: 0;              /* Gereksiz boşlukları kaldır */
-    margin: 0;
-  }
-  
-  nav li {
-    width: 100%;             /* Genişlik tam olacak */
-    text-align: center;      /* Yazı ortaya gelecek */
-  }
-  
-  nav a {
-    font-size: 1.2rem;       /* Yazı boyutu ayarlanabilir */
-    display: block;          /* Link blok gibi davranacak, tüm satırı kaplayacak */
-    padding: 0.5rem 0;       /* Link içi biraz boşluk */
-  }
-}
-body {
-  overflow-x: hidden;  /* Sağdan soldan taşmayı engeller */
 }
