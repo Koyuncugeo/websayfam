@@ -25,3 +25,14 @@ p {
   justify-content: center; /* Yatay ortalama */
   margin: 0.5rem; /* İstersen kutucuklar arası boşluk */
 }
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-item {
+    height: 70px;
+    font-size: 1rem;
+  }
+}
