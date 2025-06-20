@@ -36,3 +36,22 @@ p {
     font-size: 1rem;
   }
 }
+/* Diğer CSS kodların */
+
+.skill-item {
+  height: 80px;
+  /* diğer stiller */
+}
+
+/* Medya sorgusu en altta */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-item {
+    height: 70px;
+    font-size: 1rem;
+  }
+}
