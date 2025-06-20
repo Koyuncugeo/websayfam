@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -320,12 +320,14 @@
         }
 
         /* Responsive */
+        @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1.2rem; }
             .about-content { grid-template-columns: 1fr; }
             .cta-buttons { flex-direction: column; align-items: center; }
             .contact-info { flex-direction: column; align-items: center; }
-           
+            nav ul { flex-direction: column; gap: 1rem; }
+        }
 
         /* Scroll animations */
         .fade-in {
