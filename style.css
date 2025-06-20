@@ -106,3 +106,63 @@ nav a {
     font-size: 0.9rem;
   }
 }
+/* --- Taşma önleme --- */
+html, body {
+  overflow-x: hidden;
+}
+
+/* --- Mobilde about-content ve hero düzeni --- */
+@media (max-width: 768px) {
+  /* About içeriği tek sütun olsun */
+  .about-content {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+
+  /* Hero başlık ve paragraflar biraz küçülsün */
+  .hero h1 {
+    font-size: 2rem !important;
+  }
+  .hero p {
+    font-size: 1rem !important;
+  }
+
+  /* Profile image genişliği mobilde sınırlansın */
+  .profile-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* --- Skills grid mobilde daha iyi sığsın --- */
+@media (max-width: 400px) {
+  .skills-grid {
+    grid-template-columns: 1fr !important; /* 1 sütun */
+    padding: 0 1rem;
+  }
+  .skill-item {
+    height: 60px !important;
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+}
+
+/* --- Navigasyon linklerinin taşmasını önlemek için --- */
+nav a {
+  white-space: nowrap; /* Kelime kırılmasını engelle */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Taşan metni ... ile göster */
+}
+
+/* --- Buttonlar mobilde sığsın diye genişlik ayarı --- */
+@media (max-width: 480px) {
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .btn {
+    width: 100%; /* Butonlar tam genişlik */
+    box-sizing: border-box;
+  }
+}
