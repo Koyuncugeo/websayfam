@@ -12,3 +12,16 @@ h1 {
 p {
   font-size: 20px;
 }
+.skill-item {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+
+  height: 80px; /* Kutucukların yüksekliği eşitlendi */
+  display: flex; /* Flex ile içerik hizalama */
+  align-items: center; /* Dikey ortalama */
+  justify-content: center; /* Yatay ortalama */
+  margin: 0.5rem; /* İstersen kutucuklar arası boşluk */
+}
