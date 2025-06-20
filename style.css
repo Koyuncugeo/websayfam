@@ -103,3 +103,9 @@ p {
   font-size: 1.1rem;
   word-break: break-word;
 }
+@media (max-width: 400px) {
+  .skill-item {
+    height: 60px;
+    font-size: 0.9rem;
+  }
+}
