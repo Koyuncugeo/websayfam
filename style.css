@@ -109,3 +109,34 @@ p {
     font-size: 0.9rem;
   }
 }
+/* Masaüstü için yatay menü zaten var: */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Mobil için ekle: */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;  /* Menü dikey olacak */
+    align-items: center;     /* Ortalanacak */
+    gap: 1rem;               /* Aralarındaki boşluk az olacak */
+    padding: 0;              /* Gereksiz boşlukları kaldır */
+    margin: 0;
+  }
+  
+  nav li {
+    width: 100%;             /* Genişlik tam olacak */
+    text-align: center;      /* Yazı ortaya gelecek */
+  }
+  
+  nav a {
+    font-size: 1.2rem;       /* Yazı boyutu ayarlanabilir */
+    display: block;          /* Link blok gibi davranacak, tüm satırı kaplayacak */
+    padding: 0.5rem 0;       /* Link içi biraz boşluk */
+  }
+}
+body {
+  overflow-x: hidden;  /* Sağdan soldan taşmayı engeller */
+}
